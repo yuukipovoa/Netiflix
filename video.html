@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt" lang="pt">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <title> Netiflix </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="filme">
+            <video src="COMANDO.TO - Mulan.2020.720p.WEBRip.x264-DUAL.mkv" controls="true" autoplay="true"></video>
+            <img src="close.png" class="closetrailer" onclick="toggleVideo();">
+        </div>
+
+        <script>
+                function toggleVideo(){
+                    const filme = document.querySelector('.filme');
+                    const video = document.querySelector('video');
+                    filme.classList.toggle('active')
+                    video.cursorTime = 0;
+                    video.pause();
+                }
+            </script>
+    </body>
+    </html>

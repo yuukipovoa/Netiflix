@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt" lang="pt">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <title> Netiflix </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo"><img src="logo.png"></a>
+            <ul class="navigation">
+             <li><a href="#">Início</a></li>
+             <li><a href="#">Novidades</a></li>
+             <li><a href="#">Série</a></li>   
+             <li><a href="#">Filmes</a></li>
+             <li><a href="#">Minha lista</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Pesquisar">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+        </header>
+        <div class="banner">
+            <img src="bg.jpg" class="bg">
+            <div class="content">
+            <img src="name.png" class="movietitle">
+            <h4>
+                <span>2020</span>
+                <span><i>12+</i></span>
+                <span>1h 55min</span>
+                <span>Action</span>
+            </h4>
+            <p>Para salvar seu pai doente de servir no Exército Imperial, uma jovem destemida se 
+               disfarça de homem para lutar contra os invasores do norte da China.</p>
+        |<div class="buttons">
+            <a href="#"class="filme" onclick="toggleVideo();"><i class="fa fa-play" aria-hidden="true"></i>Assistir</a>
+            <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>Minha lista</a>
+        </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="play.png">Trailer</a>
+        </div>
+        <div class="trailer">
+            <video src="trailermulan.mp4" controls="true" autoplay="true"></video>
+            <img src="close.png" class="closetrailer" onclick="toggleVideo();">
+        </div>
+
+        <script>
+                function toggleVideo(){
+                    const trailer = document.querySelector('.trailer');
+                    const video = document.querySelector('video');
+                    trailer.classList.toggle('active')
+                    video.cursorTime = 0;
+                    video.pause();
+                }
+            </script>
+
+    </body>
+</html>
+
+
+
+
+
+
+
